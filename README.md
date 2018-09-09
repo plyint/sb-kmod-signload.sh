@@ -1,6 +1,6 @@
 # sb-kmod-signload.sh
 
-This script provides commands to sign a designated list of kernel modules and loads them via modprobe into the linux kernel.  This was built to specfically address the issue of having to resign and load kernel modules after upgrading the linux kernel, so they are not rejected by UEFI Secure Boot. (e.g. virtualbox kernel modules)
+This script provides commands to sign a designated list of kernel modules and loads them via modprobe into the linux kernel.  This was built to specfically address the issue of having to re-sign and reload kernel modules after upgrading the linux kernel, so they are not rejected by UEFI Secure Boot. (e.g. virtualbox kernel modules)
 
 As an example, this script is defaulted to load virtualbox kernel modules and will look for the private key and x509 cert in a specific directory. Please change these values inside the script as needed.
 
