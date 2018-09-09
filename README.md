@@ -17,16 +17,16 @@ sb-kmod-signload.sh requires the following software to be installed:
 
 Example: curl the script to /usr/local/bin
 ```
-$ curl https://raw.githubusercontent.com/plyint/sb-kmod-signload.sh/master/sb-kmod-signload.sh -o /usr/local/bin/sb-kmod-signload.sh
+$ sudo curl https://raw.githubusercontent.com/plyint/sb-kmod-signload.sh/master/sb-kmod-signload.sh -o /usr/local/bin/sb-kmod-signload.sh
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100  3085  100  3085    0     0   5184      0 --:--:-- --:--:-- --:--:--  5193
+100  5266  100  5266    0     0  34874      0 --:--:-- --:--:-- --:--:-- 35106
 ```
 
 2. Ensure the script has the executable permissions set and is owned by root
 ```
-chown 755 /usr/local/bin/sb-kmod-signload.sh
-chown root:root /usr/local/bin/sb-kmod-signload.sh
+sudo chmod 755 /usr/local/bin/sb-kmod-signload.sh
+sudo chown root:root /usr/local/bin/sb-kmod-signload.sh
 ```
 
 3. Adjust script variables as desired.  The defaults are listed below...
@@ -52,7 +52,7 @@ LOG=0
 
 Execute the following command as root to install the systemd service
 ```
-sudo /usr/bin/local/sb-kmod-signload.sh install-svc
+sudo /usr/local/bin/sb-kmod-signload.sh install-svc
 ```
 
 ## Usage
@@ -64,7 +64,7 @@ If the systemd script was not installed or you want to execute the commands manu
 ```
 # Become root and run the same auto command as the systemd service
 sudo su -
-/usr/bin/local/sb-kmod-signload.sh auto
+/usr/local/bin/sb-kmod-signload.sh auto
 ```
 
 The basic commands available are:
@@ -78,7 +78,7 @@ To see a list of available commands along with detailed descriptions, just run t
 ```
 # Become root and display the available commands
 sudo su -
-/usr/bin/local/sb-kmod-signload.sh
+/usr/local/bin/sb-kmod-signload.sh
 ```
 
 ## Uninstall
@@ -86,8 +86,8 @@ sudo su -
 To remove the script from your system, run the uninstall-svc command as root (if the systemd service was installed) and then delete the script.
 
 ```
-sudo /usr/bin/local/sb-kmod-signload.sh uninstall-svc
-rm -f /usr/bin/local/sb-kmod-signload.sh
+sudo /usr/local/bin/sb-kmod-signload.sh uninstall-svc
+rm -f /usr/local/bin/sb-kmod-signload.sh
 ```
 
 ## Troubleshooting
