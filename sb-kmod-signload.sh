@@ -148,7 +148,7 @@ After=runlevel4.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/sb-kmod-signload.sh auto -l
+ExecStart=/usr/local/bin/sb-kmod-signload.sh auto -l
 
 [Install]
 WantedBy=multi-user.target
